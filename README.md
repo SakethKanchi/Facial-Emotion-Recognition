@@ -1,46 +1,96 @@
-# Getting Started with Create React App
+# 🧠 Facial Recognition Web App (React + TypeScript + face-api.js)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This web application uses real-time webcam or uploaded images to detect and analyze faces. It can estimate a person’s **age**, **gender**, and **emotions** using machine learning models in the browser — no backend required!
 
-## Available Scripts
+Built with **React**, **Redux**, **TypeScript**, and styled with **Bootstrap 5**.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📸 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- 🎥 **Live webcam facial detection**
+- 🖼️ **Image upload support** for facial analysis
+- 👦 Estimated **age**, **gender**, and **emotion recognition**
+- 🧠 Powered by `face-api.js` (TensorFlow.js wrapper)
+- 🌐 Fully browser-based — no server or cloud calls
+- 📱 Responsive UI using Bootstrap
+- 💾 Global state with Redux Toolkit
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## 🚀 Demo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- Add a gif/screenshot here -->
+<p align="center">
+  <img src="demo.png" alt="Demo Screenshot" width="600" />
+</p>
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🧰 Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Technology     | Purpose                                |
+|----------------|----------------------------------------|
+| React          | Frontend framework                     |
+| TypeScript     | Static typing                          |
+| Redux Toolkit  | App state management                   |
+| face-api.js    | Face detection + emotion/age/gender    |
+| Bootstrap 5    | Styling and responsive design          |
+| MediaDevices API | Webcam access in browser            |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🛠️ Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 1. Clone the Repository
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/SakethKanchi/Facial-Emotion-Recognition.git
+cd facial-emotion-recognition
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 2. 3. Download Face-api Models
+Download the following models and place them in the public/models/ folder:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+tiny_face_detector
+age_gender
+face_expression
+```
+You can download them from: https://github.com/justadudewhohacks/face-api.js-models
 
-## Learn More
+Directory structure:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```pgsql
+public/
+└── models/
+    ├── tiny_face_detector_model-weights_manifest.json
+    ├── age_gender_model-weights_manifest.json
+    └── face_expression_model-weights_manifest.json
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 4. Start the App
+```bash
+npm start
+The app will run at http://localhost:3000
+```
+
+
+📁 Project Structure
+``` bash
+src/
+├── components/
+│   ├── WebcamFeed.tsx      # Webcam interface & detection
+│   ├── ImageUpload.tsx     # Image upload detection
+├── redux/
+│   ├── store.ts            # Redux store setup
+│   └── webcamSlice.ts      # Slice for face data + webcam state
+├── utils/
+│   └── loadModels.ts       # Loads face-api.js models
+├── App.tsx
+└── index.tsx
+```
+
+### 🙌 Contributing
+> Contributions are welcome! Feel free to open issues or submit pull requests.
+
