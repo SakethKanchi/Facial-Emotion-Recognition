@@ -22,7 +22,7 @@ Built with **React**, **Redux**, **TypeScript**, and styled with **Bootstrap 5**
 
 <!-- Add a gif/screenshot here -->
 <p align="center">
-  <img src="demo.png" alt="Demo Screenshot" width="600" />
+  <img src="./images/Screenshot2.png" alt="./images/Screenshot2.png" width="600" />
 </p>
 
 ---
